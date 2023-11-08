@@ -1,5 +1,11 @@
 # flow-typescript-tools
 
+## 1.0.0
+
+### Major Changes
+
+- e0d46c1: full release
+
 ## 1.2.8
 
 ### Patch Changes
