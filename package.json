@@ -1,0 +1,15 @@
+{
+  "name": "flow-typescript-tools",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "compile-mac-arm": "deno compile --allow-read --allow-write --allow-run --allow-net --target aarch64-apple-darwin --output ts main.ts && tar -czvf flow_typescript_tools_Darwin_arm64.tar.gz ts && rm ts",
+    "compile-mac-x86": "deno compile --allow-read --allow-write --allow-run --allow-net --target x86_64-apple-darwin --output ts main.ts && tar -czvf flow_typescript_tools_Darwin_x86_64.tar.gz ts && rm ts",
+    "compile-windows": "deno compile --allow-read --allow-write --allow-run --allow-net --target x86_64-pc-windows-msvc --output ts main.ts && tar -czvf flow_typescript_tools_Windows_x86_64.tar.gz ts.exe && rm ts.exe",
+    "compile-linux": "deno compile --allow-read --allow-write --allow-run --allow-net --target x86_64-unknown-linux-gnu --output ts main.ts && tar -czvf flow_typescript_tools_Linux_x86_64.tar.gz ts && rm ts",
+    "publish": "npx changeset tag && npm run compile-mac-arm && npm run compile-mac-x86 && npm run compile-windows && npm run compile-linux"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2"
+  }
+}
