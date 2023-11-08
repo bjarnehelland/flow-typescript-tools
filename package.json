@@ -1,7 +1,7 @@
 {
   "name": "flow-typescript-tools",
   "private": true,
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "compile-mac-arm": "deno compile --allow-read --allow-write --allow-run --allow-net --target aarch64-apple-darwin --output ts main.ts && tar -czvf flow_typescript_tools_Darwin_arm64.tar.gz ts && rm ts",
     "compile-mac-x86": "deno compile --allow-read --allow-write --allow-run --allow-net --target x86_64-apple-darwin --output ts main.ts && tar -czvf flow_typescript_tools_Darwin_x86_64.tar.gz ts && rm ts",
